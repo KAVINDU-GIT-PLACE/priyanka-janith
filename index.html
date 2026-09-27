@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#faf8f3" />
+  <meta name="description" content="Wedding invitation of Priyanka & Janith — Saturday, 17 October 2026." />
+  <meta property="og:title" content="Priyanka & Janith — Wedding Invitation" />
+  <meta property="og:description" content="Join us as we celebrate our wedding on Saturday, 17 October 2026." />
+  <title>Priyanka & Janith — Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ivory:#faf8f3;
+      --paper:#fffdf9;
+      --ink:#242321;
+      --muted:#6f6b63;
+      --gold:#b5965c;
+      --gold-light:#d8c59b;
+      --line:#dfd5c4;
+      --shadow:0 18px 60px rgba(54,45,31,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--ivory);
+      color:var(--ink);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;word-wrap:break-word;
+    }
+    body.locked{overflow:hidden}
+    a{color:inherit}
+    .page{max-width:760px;margin:0 auto;background:var(--paper);box-shadow:var(--shadow);position:relative}
+    .section{position:relative;padding:76px 28px}
+    .hero{
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:72px 24px;
+      background:
+        radial-gradient(circle at 50% 15%, rgba(181,150,92,.06), transparent 30%),
+        var(--paper);
+    }
+    .inner{max-width:600px;margin:auto}
+    .ornament{color:var(--gold);letter-spacing:7px;font-size:18px;margin-bottom:28px}
+    .monogram{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:26px;letter-spacing:2px;margin-bottom:12px}
+    .names{font-family:"Great Vibes",cursive;font-size:clamp(64px,14vw,104px);line-height:.88;font-weight:400}
+    .amp{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:36px;margin:15px 0}
+    .eyebrow{font-size:11px;letter-spacing:7px;color:var(--gold);margin-top:30px}
+    .date{font-family:"Cormorant Garamond",serif;font-size:20px;letter-spacing:3px;margin-top:12px}
+    .gold-rule{width:70px;height:1px;background:var(--gold);opacity:.65;margin:30px auto}
+    .quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;line-height:1.55;color:#5e5a53;max-width:470px;margin:0 auto}
+    .verse{font-size:10px;letter-spacing:2px;color:var(--gold);margin-top:14px}
+
+    .flourish{
+      position:absolute;width:120px;height:70px;opacity:.7;color:var(--gold);pointer-events:none;
+    }
+    .flourish::before,.flourish::after{
+      content:"";position:absolute;border:1px solid currentColor;border-bottom:0;border-left:0;border-radius:50%;
+      width:70px;height:30px;transform:rotate(-12deg);
+    }
+    .flourish::after{left:45px;top:8px;transform:scaleX(-1) rotate(-12deg)}
+    .top-left{top:28px;left:14px;transform:rotate(-8deg)}
+    .top-right{top:28px;right:14px;transform:scaleX(-1) rotate(-8deg)}
+    .bottom-left{bottom:24px;left:14px;transform:scaleY(-1) rotate(-8deg)}
+    .bottom-right{bottom:24px;right:14px;transform:scale(-1,-1) rotate(-8deg)}
+
+    .intro{text-align:center}
+    .section-title{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:500;letter-spacing:2px;margin:0 0 14px}
+    .section-kicker{font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:12px}
+    .intro p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.55;color:#55514a;max-width:540px;margin:0 auto}
+
+    .countdown-section{text-align:center;background:var(--ivory);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);max-width:560px;margin:30px auto 0}
+    .time{padding:4px 12px;border-right:1px solid var(--line)}
+    .time:last-child{border-right:0}
+    .num{font-family:"Cormorant Garamond",serif;font-size:42px;line-height:1}
+    .label{font-size:9px;letter-spacing:3px;color:var(--gold);margin-top:8px}
+    .count-note{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);margin-top:22px}
+
+    .calendar-wrap{display:flex;justify-content:center}
+    .calendar{
+      width:min(100%,500px);
+      background:#fff;
+      border:1px solid var(--gold);
+      padding:30px 24px 24px;
+      box-shadow:0 12px 35px rgba(50,40,25,.05);
+    }
+    .cal-month{text-align:center;font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:7px}
+    .cal-year{text-align:center;color:var(--gold);font-size:10px;letter-spacing:4px;margin:5px 0 20px}
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;text-align:center}
+    .dow{font-size:9px;color:var(--gold);letter-spacing:1px;padding-bottom:7px}
+    .day{font-family:"Cormorant Garamond",serif;font-size:16px;height:31px;display:flex;align-items:center;justify-content:center}
+    .day.empty{visibility:hidden}
+    .day.special{position:relative;font-weight:600;color:#fff;z-index:1}
+    .day.special::before{content:"";position:absolute;width:31px;height:31px;border-radius:50%;background:var(--gold);z-index:-1}
+    .calendar-note{text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);margin-top:18px}
+
+    .events{background:var(--paper)}
+    .event-list{display:grid;gap:22px;max-width:600px;margin:30px auto 0}
+    .event{
+      text-align:center;border:1px solid var(--line);padding:34px 22px;background:#fff;
+      position:relative;
+    }
+    .event-icon{font-size:19px;color:var(--gold);margin-bottom:12px}
+    .event h3{font-family:"Cormorant Garamond",serif;font-size:29px;font-weight:500;margin:0 0 8px}
+    .event .venue{font-family:"Cormorant Garamond",serif;font-size:21px}
+    .event .time-text{font-size:11px;letter-spacing:3px;color:var(--gold);margin-top:9px}
+    .map-btn,.wa-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      margin-top:22px;padding:12px 20px;text-decoration:none;font-size:10px;letter-spacing:2px;
+      text-transform:uppercase;border:1px solid var(--gold);background:var(--paper);transition:.25s ease;
+    }
+    .map-btn:hover,.wa-btn:hover{background:var(--gold);color:white;transform:translateY(-1px)}
+
+    .rsvp{text-align:center;background:var(--ivory)}
+    .contacts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:560px;margin:30px auto 0}
+    .contact{background:#fff;border:1px solid var(--line);padding:25px 15px}
+    .contact-name{font-family:"Cormorant Garamond",serif;font-size:25px}
+    .phone{font-size:12px;color:var(--muted);margin-top:5px}
+    .wa-btn{margin-top:16px}
+    .closing{text-align:center;padding-bottom:95px}
+    .closing .names-small{font-family:"Great Vibes",cursive;font-size:62px;margin-top:18px}
+    .closing p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;color:var(--muted)}
+    .footer-mark{font-size:10px;letter-spacing:4px;color:var(--gold);margin-top:30px}
+
+    /* Envelope */
+    .cover{
+      position:fixed;inset:0;background:var(--ivory);z-index:1000;
+      display:flex;align-items:center;justify-content:center;padding:24px;
+      transition:opacity .65s ease,visibility .65s ease;
+    }
+    .cover.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .envelope{width:min(92vw,560px);aspect-ratio:1.5;position:relative;filter:drop-shadow(0 20px 45px rgba(40,30,20,.13))}
+    .env-back{position:absolute;inset:0;background:#f1eadf;border:1px solid #d5c5ab}
+    .env-flap{
+      position:absolute;left:0;right:0;top:0;height:60%;background:#f8f3eb;
+      clip-path:polygon(0 0,100% 0,50% 100%);border-top:1px solid #d5c5ab;
+      transform-origin:top;transition:transform .8s cubic-bezier(.2,.8,.2,1);
+    }
+    .env-card{
+      position:absolute;left:8%;right:8%;bottom:6%;height:78%;background:#fffdf9;border:1px solid #d8c9b2;
+      display:flex;align-items:center;justify-content:center;text-align:center;z-index:2;
+      transform:translateY(35%);transition:transform .9s cubic-bezier(.2,.8,.2,1);
+    }
+    .env-card-inner{padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+    .env-monogram{font-family:"Cormorant Garamond",serif;color:var(--gold);letter-spacing:3px;font-size:18px}
+    .env-names{font-family:"Great Vibes",cursive;font-size:44px;line-height:.95;margin:8px 0}
+    .open-btn{
+      position:absolute;left:50%;bottom:-58px;transform:translateX(-50%);z-index:10;
+      border:1px solid var(--gold);background:transparent;color:var(--ink);padding:13px 24px;
+      font-size:10px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;white-space:nowrap;
+    }
+    .envelope.open .env-flap{transform:rotateX(180deg)}
+    .envelope.open .env-card{transform:translateY(-12%)}
+    .cover-note{position:absolute;bottom:22px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);font-size:15px}
+
+    @media(max-width:560px){
+      .cover{padding:16px}
+      .envelope{width:min(94vw,420px);aspect-ratio:1.25}
+      .env-card{left:7%;right:7%;bottom:8%;height:76%}
+      .env-card-inner{padding:12px}
+      .env-names{font-size:34px;line-height:.9}
+      .env-monogram{font-size:15px}
+      .open-btn{bottom:-54px;padding:12px 20px;font-size:9px}
+      .cover-note{bottom:12px;font-size:13px;padding:0 20px}
+
+      .section{padding:54px 16px}
+      .hero{padding:58px 18px}
+      .section-title{font-size:34px}
+      .intro p{font-size:19px}
+      .event{padding:28px 16px}
+      .event h3{font-size:27px}
+      .event .venue{font-size:19px}
+      .map-btn,.wa-btn{width:100%;max-width:280px}
+      .closing{padding-bottom:70px}
+
+      .hero{min-height:100svh}
+      .names{font-size:68px}
+      .countdown .num{font-size:34px}
+      .countdown .time{padding:4px 5px}
+      .contacts{grid-template-columns:1fr}
+      .calendar{padding:24px 14px 20px}
+      .cal-grid{gap:5px}
+      .day{font-size:15px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+    }
+  </style>
+</head>
+
+<body class="locked">
+  <div class="cover" id="cover">
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-card">
+        <div class="env-card-inner">
+          <div class="env-monogram">P &amp; J</div>
+          <div class="env-names">Priyanka<br>&amp; Janith</div>
+          <div style="font-size:9px;letter-spacing:3px;color:#b5965c">17 OCTOBER 2026</div>
+        </div>
+      </div>
+      <div class="env-flap"></div>
+      <button class="open-btn" id="openBtn">Open Invitation</button>
+    </div>
+    <div class="cover-note">Tap “Open Invitation” to view all wedding details</div>
+  </div>
+
+  <main class="page">
+    <section class="hero">
+      <span class="flourish top-left"></span><span class="flourish top-right"></span>
+      <div class="inner">
+        <div class="ornament">— ❦ —</div>
+        <div class="monogram">P &amp; J</div>
+        <div class="names">Priyanka</div>
+        <div class="amp">&amp;</div>
+        <div class="names">Janith</div>
+        <div class="eyebrow">WEDDING</div>
+        <div class="date">SATURDAY · 17 OCTOBER 2026</div>
+        <div class="gold-rule"></div>
+        <p class="quote">“Love bears all things, believes all things, hopes all things, endures all things.”</p>
+        <div class="verse">1 CORINTHIANS 13:7</div>
+        <div style="margin-top:34px;font-size:9px;letter-spacing:3px;color:#b5965c">SCROLL TO EXPLORE</div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="section-kicker">WITH JOY IN OUR HEARTS</div>
+      <h2 class="section-title">You are warmly invited</h2>
+      <p>to celebrate the beginning of a beautiful new chapter as we exchange our vows and gather with the people we love.</p>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="section-kicker">COUNTDOWN TO OUR DAY</div>
+      <h2 class="section-title">Until we say “I do”</h2>
+      <div class="countdown" id="countdown">
+        <div class="time"><div class="num" id="days">--</div><div class="label">DAYS</div></div>
+        <div class="time"><div class="num" id="hours">--</div><div class="label">HOURS</div></div>
+        <div class="time"><div class="num" id="minutes">--</div><div class="label">MINUTES</div></div>
+        <div class="time"><div class="num" id="seconds">--</div><div class="label">SECONDS</div></div>
+      </div>
+      <div class="count-note" id="countNote">Counting the moments until our celebration.</div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker" style="text-align:center">SAVE THE DATE</div>
+      <div class="calendar-wrap">
+        <div class="calendar">
+          <div class="cal-month">OCTOBER</div>
+          <div class="cal-year">2026</div>
+          <div class="cal-grid" id="calendarGrid"></div>
+          <div class="calendar-note">17 · Our special day ♡</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events">
+      <div class="section-kicker" style="text-align:center">THE CELEBRATION</div>
+      <h2 class="section-title" style="text-align:center">Event Details</h2>
+      <div class="event-list">
+        <article class="event">
+          <div class="event-icon">✦</div>
+          <h3>Wedding Ceremony</h3>
+          <div class="venue">The Methodist Church, Rawathawatta</div>
+          <div class="time-text">9:30 A.M.</div>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Methodist+Church+Rawathawatta+Moratuwa">⌖ View Location</a>
+        </article>
+
+        <article class="event">
+          <div class="event-icon">✦</div>
+          <h3>Reception</h3>
+          <div class="venue">Grand Bolgoda, Moratuwa</div>
+          <div class="time-text">11:00 A.M.</div>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Grand+Bolgoda+Moratuwa">⌖ View Location</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section rsvp">
+      <div class="section-kicker">KINDLY RESPOND</div>
+      <h2 class="section-title">RSVP</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#6f6b63">Please let us know that you will be joining us.</p>
+      <div class="contacts">
+        <div class="contact">
+          <div class="contact-name">Nisal</div>
+          <div class="phone">077 641 0357</div>
+          <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/94776410357?text=Hello%20Nisal%2C%20thank%20you%20for%20inviting%20me%20to%20Priyanka%20%26%20Janith%27s%20wedding.%20I%27d%20like%20to%20RSVP.">WhatsApp RSVP</a>
+        </div>
+        <div class="contact">
+          <div class="contact-name">Pradeep</div>
+          <div class="phone">077 663 5212</div>
+          <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/94776635212?text=Hello%20Pradeep%2C%20thank%20you%20for%20inviting%20me%20to%20Priyanka%20%26%20Janith%27s%20wedding.%20I%27d%20like%20to%20RSVP.">WhatsApp RSVP</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="gold-rule"></div>
+      <p>We can’t wait to celebrate with you.</p>
+      <div class="names-small">Priyanka &amp; Janith</div>
+      <div class="footer-mark">17 · 10 · 2026</div>
+      <span class="flourish bottom-left"></span><span class="flourish bottom-right"></span>
+    </section>
+  </main>
+
+  <script>
+    // Wedding ceremony time: 17 October 2026, 9:30 AM Sri Lanka time (UTC+05:30).
+    const weddingTime = new Date("2026-10-17T09:30:00+05:30").getTime();
+
+    function updateCountdown(){
+      const now = Date.now();
+      let diff = weddingTime - now;
+      if(diff <= 0){
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+        document.getElementById("countNote").textContent = "Today is the day — let the celebration begin.";
+        return;
+      }
+      const day = 86400000, hour = 3600000, minute = 60000;
+      const days = Math.floor(diff/day); diff %= day;
+      const hours = Math.floor(diff/hour); diff %= hour;
+      const minutes = Math.floor(diff/minute);
+      const seconds = Math.floor((diff%minute)/1000);
+      document.getElementById("days").textContent = String(days).padStart(2,"0");
+      document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+
+    // October 2026 calendar, with the 17th highlighted.
+    const grid = document.getElementById("calendarGrid");
+    const headers = ["S","M","T","W","T","F","S"];
+    headers.forEach(d => {
+      const el=document.createElement("div"); el.className="dow"; el.textContent=d; grid.appendChild(el);
+    });
+    const firstDay = new Date(2026,9,1).getDay();
+    const totalDays = 31;
+    for(let i=0;i<firstDay;i++){
+      const el=document.createElement("div"); el.className="day empty"; el.textContent=""; grid.appendChild(el);
+    }
+    for(let d=1;d<=totalDays;d++){
+      const el=document.createElement("div");
+      el.className="day"+(d===17?" special":"");
+      el.textContent=d;
+      grid.appendChild(el);
+    }
+
+    const cover=document.getElementById("cover");
+    const envelope=document.getElementById("envelope");
+    const openBtn=document.getElementById("openBtn");
+    function openInvitation(){
+      envelope.classList.add("open");
+      setTimeout(()=>{
+        cover.classList.add("hidden");
+        document.body.classList.remove("locked");
+      },850);
+    }
+    openBtn.addEventListener("click", openInvitation);
+    document.querySelector(".env-card").addEventListener("click", openInvitation);
+    envelope.addEventListener("click", (e) => {
+      if (e.target === envelope || e.target.classList.contains("env-back")) openInvitation();
+    });
+  </script>
+</body>
+</html>
